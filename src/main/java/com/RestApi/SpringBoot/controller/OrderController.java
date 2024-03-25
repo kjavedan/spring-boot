@@ -18,7 +18,7 @@ public class OrderController {
     @PostMapping("/add")
     public String addOrder(@RequestBody Order order){
         orderService.addOrder(order);
-
+        System.out.println(order);
         return "Order added successfully";
     }
 }
