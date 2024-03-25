@@ -1,13 +1,12 @@
 package com.RestApi.SpringBoot.entity;
 
 import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
 import lombok.Data;
 import jakarta.persistence.Id;
 import lombok.NoArgsConstructor;
 import lombok.AllArgsConstructor;
 import jakarta.persistence.Entity;
-
-import java.util.Iterator;
 
 @Data
 @Entity
@@ -15,7 +14,7 @@ import java.util.Iterator;
 @AllArgsConstructor
 public class User {
     @Id
-    @GeneratedValue
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
     private Integer age;
     private String name;
